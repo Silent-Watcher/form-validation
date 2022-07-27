@@ -1,0 +1,155 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom_tooltip {
+  --bs-tooltip-bg: #e13a5a;
+}
+
+#form_wrapper {
+  overflow: hidden;
+  width: 400px;
+  height: 500px;
+}
+#form_wrapper #signup__form {
+  z-index: -4;
+  transform: translateY(-600px);
+}
+
+form {
+  transition: all 0.5s ease;
+  background-color: #363636;
+  caret-color: peru;
+  width: inherit;
+  height: inherit;
+}
+
+.text-peru {
+  color: peru;
+}
+
+.active_input, input.char_input:focus + label, .filled {
+  color: peru;
+  top: -13px !important;
+  left: 11px !important;
+}
+
+.filled {
+  color: #858585;
+}
+
+input {
+  transition: 0.3s ease;
+}
+input.char_input {
+  outline: 0;
+  border: 2px solid #404040;
+  background-color: #303030;
+  color: #f5f5f5;
+  padding: 15px;
+  padding-left: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+input.char_input::-moz-selection {
+  background-color: rgb(240, 161, 82);
+  color: #101010;
+  font-weight: bold;
+}
+input.char_input::selection {
+  background-color: rgb(240, 161, 82);
+  color: #101010;
+  font-weight: bold;
+}
+input.char_input:focus {
+  border: 2px solid peru;
+}
+input.char_input:focus::-moz-placeholder {
+  opacity: 1;
+}
+input.char_input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+input.char_input:focus::placeholder {
+  opacity: 1;
+}
+input.char_input::-moz-placeholder {
+  color: #f5f5f5;
+  opacity: 0;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input.char_input:-ms-input-placeholder {
+  color: #f5f5f5;
+  opacity: 0;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input.char_input::placeholder {
+  color: #f5f5f5;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+label {
+  cursor: pointer;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+label.char_label {
+  top: 15px;
+  left: 33px;
+  transition: all 0.2s;
+  z-index: 1;
+}
+label.char_label::before {
+  content: "";
+  height: 5px;
+  background-color: #303030;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  z-index: -1;
+}
+
+.form_icon {
+  left: 10px;
+}
+.form_icon.see_Password {
+  right: 30px;
+  left: initial;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.forgot_link {
+  color: #cd853f;
+  transition: 0.5s ease;
+}
+.forgot_link:hover {
+  color: #fdac5b;
+}
+
+.check_icon {
+  transition: color 0.3s;
+  color: #f5f5f5;
+}
+
+.remember_input:checked + .check_icon {
+  color: lightgreen !important;
+}
+
+#sign_up_ct_link, #login_ct_link {
+  transition: 0.5s ease;
+}
+#sign_up_ct_link:hover, #login_ct_link:hover {
+  color: #fdac5b;
+}/*# sourceMappingURL=style.css.map */
