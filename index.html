@@ -21,7 +21,8 @@
 <body>
     <span class="user-select-none fs-1 text-white mb-4">v1.0.0</span>
     <main class="position-relative" id="form_wrapper">
-        <form class=" animate__animated d-flex justify-content-center flex-column position-absolute rounded p-4 text-info" action="" method="post" id="signup__form" autocomplete="off">
+        <form hidden class=" animate__animated d-flex justify-content-center flex-column position-absolute rounded p-4 text-info" action="" method="post" id="signup__form" autocomplete="off">
+            <span class="animate__animated capsLockTextMsg pt-4">CapsLock is on!</span>
             <section class="d-flex justify-content-between align-items-center" id="signup__form__header">
                 <h2 class="user-select-none animate__animated animate__tada animate__delay-1s" id="signup__form__heading">signUp</h2>
                 <div id="signup__form__social__buttons">
@@ -64,6 +65,7 @@
             </div>
         </form>
         <form class=" animate__animated d-flex justify-content-center flex-column position-absolute rounded p-4 text-info" action="" method="post" id="login__form" autocomplete="off">
+            <span hidden class="capsLockTextMsg mb-2 pb-4">CapsLock is on!</span>
             <section class="d-flex justify-content-between align-items-center" id="login__form__header">
                 <h2 class="user-select-none animate__animated animate__tada animate__delay-1s" id="login__form__heading">Login</h2>
                 <div id="login__form__social__buttons">

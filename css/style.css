@@ -153,4 +153,20 @@ label.char_label::before {
 }
 #sign_up_ct_link:hover, #login_ct_link:hover {
   color: #fdac5b;
+}
+
+.capsLockTextMsg {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 13px;
+  color: yellow;
+}
+.capsLockTextMsg::before {
+  content: "";
+  width: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  height: 8px;
+  background-color: yellow;
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */

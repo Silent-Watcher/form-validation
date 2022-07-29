@@ -42,25 +42,25 @@ inputs.forEach((input) => {
       this.nextElementSibling.classList.remove('filled');
     }
   });
-  //   
+  //
   input.addEventListener('focus', function () {
-    if(this.type === 'password'){
-        if (this.value.length > 0) passWordStatus.hidden = false;
-        else passWordStatus.hidden = true;
+    if (this.type === 'password') {
+      if (this.value.length > 0) passWordStatus.hidden = false;
+      else passWordStatus.hidden = true;
     }
     this.parentElement.lastElementChild.hidden = true;
     this.style.borderColor = 'peru';
   });
   if (input.type === 'password') {
     input.addEventListener('input', function () {
-        passWordStatus.hidden = false;
+      passWordStatus.hidden = false;
       if (input.value.length > 0 && input.value.length < 8) {
         passWordStatus.style.color = '#fd7e14';
         passWordStatus.innerHTML =
           'password is weak <i class="fa-solid fa-circle-exclamation"></i>';
       } else if (input.value.length >= 8) {
-        passWordStatus.innerHTML ='password is strong 💪';
-          passWordStatus.style.color = '#90ee90';
+        passWordStatus.innerHTML = 'password is strong 💪';
+        passWordStatus.style.color = '#90ee90';
       } else {
         passWordStatus.hidden = true;
       }
@@ -95,3 +95,18 @@ showLoginBtn.addEventListener('click', function (e) {
   signupForm.classList.add('animate__backOutUp');
 });
 // form animations
+
+// detect caps lock
+document.addEventListener('keyup', (event) => {
+  let capsLockTxtMsgs = Array.from(document.getElementsByClassName('capsLockTextMsg'));
+  if (event.getModifierState('CapsLock')) {
+    capsLockTxtMsgs.map(function(capsLockTxtMsg){
+      capsLockTxtMsg.hidden = false;
+    });
+  }else{
+    capsLockTxtMsgs.map(function(capsLockTxtMsg){     
+      capsLockTxtMsg.hidden = true;
+      });
+    }
+});
+// detect caps lock
